@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body th:object="${specialOffer}">
+    <h1>Adds Pizza's</h1>
+    <form method="POST">
+		 <div>
+                <label for="start">Data di inizio:</label>
+                <input type="date" id="start" th:field="*{start}" />
+            </div>
+            
+            <div>
+                <label for="end">Data di fine:</label>
+                <input type="date" id="end" th:field="*{end}"  />
+            </div>
+            
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" th:field="*{name}"  />
+            </div>
+            
+            <div>
+                <label for="perc">Percentuale:</label>
+                <input type="number" id="perc" th:field="*{perc}"  />
+            </div>
+            
+            
+		<input type="submit" value="CREATE">
+	</form>
+    
+</body>
+</html>
